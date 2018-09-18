@@ -5,6 +5,7 @@
       <li><router-link v-bind:to="{ name: 'HelloWorld' }">Main</router-link></li>
       <li><router-link v-bind:to="{ name: 'HelloGrid' }">Hello-Grid</router-link></li>
       <li><router-link v-bind:to="{ name: 'SmGrid' }">SM-Grid</router-link></li>
+      <li><router-link v-bind:to="{ name: 'Movie' }">Movie</router-link></li>
     </ul>
     <router-view/>
   </div>

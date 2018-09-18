@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import HelloGrid from '@/components/HelloGrid'
 import SmGrid from '@/components/smGrid'
+import Movie from '@/components/Movie'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/smGrid',
       name: 'SmGrid',
       component: SmGrid
+    },
+    {
+      path: '/movie',
+      name: 'Movie',
+      component: Movie
     }
   ]
 })
