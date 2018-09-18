@@ -1,6 +1,10 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <ul>
+      <li><router-link v-bind:to="{ name: 'HelloWorld' }">Main</router-link></li>
+      <li><router-link v-bind:to="{ name: 'HelloGrid' }">Hello-Grid</router-link></li>
+    </ul>
     <router-view/>
   </div>
 </template>
