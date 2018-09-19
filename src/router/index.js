@@ -4,8 +4,12 @@ import HelloWorld from '@/components/HelloWorld'
 import HelloGrid from '@/components/HelloGrid'
 import SmGrid from '@/components/smGrid'
 import Movie from '@/components/Movie'
+import VueGoodTablePlugin from 'vue-good-table'
+
+import 'vue-good-table/dist/vue-good-table.css'
 
 Vue.use(Router)
+Vue.use(VueGoodTablePlugin)
 
 export default new Router({
   routes: [
