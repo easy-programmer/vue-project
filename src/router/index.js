@@ -11,6 +11,7 @@ import 'vue-good-table/dist/vue-good-table.css'
 Vue.use(Router)
 Vue.use(VueGoodTablePlugin)
 
+
 export default new Router({
   routes: [
     {
