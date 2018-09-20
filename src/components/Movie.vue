@@ -4,7 +4,8 @@
       (2018-09-19) 설치 : npm install --save vue-good-table<br/>
       (2018-09-20) 그리드에 이미지를 넣고 싶다. type에서 image/link를 제공하지 않는 듯 하여 html을 이용해서 입력함.평점을 ★로 formatting 하고 싶다<br/><br/>
 
-      영화 포스터 출처 : https://www.themoviedb.org
+      vue-good-table : <a href="https://xaksis.github.io/vue-good-table/">https://xaksis.github.io/vue-good-table/</a><br/>
+      영화 포스터 출처 : <a href="https://www.themoviedb.org">https://www.themoviedb.org</a>
     </p>             
     <vue-good-table
       :columns="columns"
@@ -143,13 +144,4 @@ export default {
 </script>
 
 <style>
-th {
-  background-color: #42b983;
-  color: rgba(255,255,255,0.66);
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 </style>
