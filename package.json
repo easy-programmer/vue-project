@@ -11,6 +11,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "accounting": "^0.4.1",
+    "moment": "^2.22.2",
     "vue": "^2.5.2",
     "vue-good-table": "^2.14.1",
     "vue-router": "^3.0.1"
