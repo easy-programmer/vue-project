@@ -1,6 +1,12 @@
 <template>
   <div>
-    npm install --save vue-good-table
+    <p align="left">
+      (2018-09-19) 설치 : npm install --save vue-good-table<br/>
+      (2018-09-20) 그리드에 이미지를 넣고 싶다. type에서 image/link를 제공하지 않는 듯 하여 html을 이용해서 입력함.평점을 ★로 formatting 하고 싶다<br/><br/>
+
+      vue-good-table : <a href="https://xaksis.github.io/vue-good-table/">https://xaksis.github.io/vue-good-table/</a><br/>
+      영화 포스터 출처 : <a href="https://www.themoviedb.org">https://www.themoviedb.org</a>
+    </p>             
     <vue-good-table
       :columns="columns"
       :rows="rows"
@@ -20,7 +26,8 @@ export default {
       columns: [
         {
           label: '포스터',
-          field: 'poster'
+          field: 'poster',
+          html: true
         },
         {
           label: '제목',
@@ -52,12 +59,13 @@ export default {
         },
         {
           label: 'Score',
-          field: 'score'
+          field: 'score',
+          formatFn: this.formatFn
         },
       ],
       rows: [
         { id:1,
-          poster: '',
+          poster: "<a href='https://www.themoviedb.org/movie/6977-no-country-for-old-men?language=ko-KR' target='_blank'><img src='https://image.tmdb.org/t/p/w600_and_h900_bestv2/tPBa3fpQ02Il5gMuipZ7hgLh9PC.jpg' alt='노인을 위한 나라는 없다' height='120' width='78'/></a>",
           title:"노인을 위한 나라는 없다", 
           date: '20180908', 
           jenre: '스릴러, 드라마, 범죄', 
@@ -67,7 +75,7 @@ export default {
           score: '3' 
         },
         { id:2, 
-          poster: '',
+          poster: "<a href='https://www.themoviedb.org/movie/333339-ready-player-one?language=ko-KR' target='_blank'><img src='https://image.tmdb.org/t/p/w600_and_h900_bestv2/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg' alt='레디 플레이어 원' height='120' width='78'/></a>",
           title:"레디 플레이어 원", 
           date: '20180818', 
           jenre: '액션, SF, 모험', 
@@ -77,7 +85,7 @@ export default {
           score: '3' 
         },
         { id:3, 
-          poster: '',
+          poster: "<a href='https://www.themoviedb.org/movie/529859?language=ko-KR' target='_blank'><img src='https://image.tmdb.org/t/p/w600_and_h900_bestv2/AfrzdEP9r7Cjo16qf3rjMjLmKrS.jpg' alt='변산' height='120' width='78'/></a>",
           title:"변산", 
           date: '20180904', 
           jenre: '드라마', 
@@ -87,7 +95,7 @@ export default {
           score: '3.5'
         },
         { id:4, 
-          poster: '',
+          poster: "<a href='https://www.themoviedb.org/movie/359940-three-billboards-outside-ebbing-missouri?language=ko-KR' target='_blank'><img src='https://image.tmdb.org/t/p/w600_and_h900_bestv2/5z6uHS30VhInm2MDkbVoa0SegLJ.jpg' alt='쓰리 빌보드' height='120' width='78'/></a>",
           title:"쓰리 빌보드", 
           date: '20180818', 
           jenre: '드라마, 코미디, 범죄', 
@@ -97,7 +105,7 @@ export default {
           score: '3.5' 
         },
         { id:5, 
-          poster: '',
+          poster: "<a href='https://www.themoviedb.org/movie/402900-ocean-s-eight?language=ko-KR' target='_blank'><img src='https://image.tmdb.org/t/p/w600_and_h900_bestv2/mbE7RoCiFLljulqOhYSlkrnt5b0.jpg' alt='오션스8' height='120' width='78'/></a>",
           title:"오션스8", 
           date: '20180723', 
           jenre: '액션, 범죄', 
@@ -107,7 +115,7 @@ export default {
           score: '4' 
         },
         { id:6, 
-          poster: '',
+          poster: "<a href='https://www.themoviedb.org/movie/499028-be-with-you?language=ko-KR' target='_blank'><img src='https://image.tmdb.org/t/p/w600_and_h900_bestv2/c7zp4eeoWKLhUadgEv3SWa0lbFl.jpg' alt='지금 만나러 갑니다' height='120' width='78'/></a>",
           title:"지금 만나러 갑니다", 
           date: '20180909', 
           jenre: '드라마', 
@@ -117,7 +125,7 @@ export default {
           score: '3.5' 
         },
         { id:7, 
-          poster: '',
+          poster: "<a href='https://www.themoviedb.org/movie/338729?language=ko-KR' target='_blank'><img src='https://image.tmdb.org/t/p/w600_and_h900_bestv2/u1LHo5ObRZA1r8pzSq0OqQ2qlaU.jpg' alt='뷰티 인사이드' height='120' width='78'/></a>",
           title:"뷰티인사이드", 
           date: '20180916', 
           jenre: '드라마', 
@@ -127,7 +135,13 @@ export default {
           score: '4' 
         }
       ],
+      formatFn: function(value) {
+        
+      }
     }
   }
 }
 </script>
+
+<style>
+</style>
