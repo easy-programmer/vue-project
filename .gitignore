@@ -12,3 +12,12 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+
+bin/
+public/
+routes/
+views/
+
+app.js
+package-lock.json
+package.json
