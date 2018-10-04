@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import HelloGrid from '@/components/HelloGrid'
 import SmGrid from '@/components/smGrid'
 import Movie from '@/components/Movie'
+import HelloBoard from '@/components/HelloBoard'
 import VueGoodTablePlugin from 'vue-good-table'
 import BootstrapVue from 'bootstrap-vue'
 
@@ -36,6 +37,11 @@ export default new Router({
       path: '/movie',
       name: 'Movie',
       component: Movie
+    },
+    {
+      path: '/HelloBoard',
+      name: 'HelloBoard',
+      component: HelloBoard
     }
   ]
 })
